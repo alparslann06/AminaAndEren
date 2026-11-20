@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Amina &amp; Eren · Birthday Celebration</title>
-  <meta name="description" content="Join us in celebrating Amina and Eren’s birthdays. Our story, photos, party details and a place to leave your wishes.">
+  <title>For Amina</title>
+  <meta name="description" content="A little something for Amina’s birthday.">
   <meta name="theme-color" content="#ffe3ec">
-  <meta property="og:title" content="Amina &amp; Eren · Birthday Celebration">
-  <meta property="og:description" content="Two birthdays, one big celebration. Come party with us.">
+  <meta property="og:title" content="For Amina">
+  <meta property="og:description" content="A little something for your birthday.">
   <meta property="og:type" content="website">
+  <meta name="robots" content="noindex">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,231 +19,83 @@
 </head>
 <body class="is-locked">
 
-  <!-- ============ Intro: blow out the candles ============ -->
-  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
-    <div class="intro__inner">
-      <h1 class="intro__title" id="intro-title">Make a wish</h1>
-      <p class="intro__sub">Two candles, two birthdays. Blow them out to come in.</p>
+  <!-- heart sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.2C.8 8.3 2.7 4.5 6.3 4.5c2 0 3.7 1.1 4.7 2.7h2c1-1.6 2.7-2.7 4.7-2.7 3.6 0 5.5 3.8 3.9 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/></symbol>
+  </svg>
 
-      <svg class="cake" viewBox="0 0 320 300" aria-hidden="true">
-        <!-- plate -->
-        <ellipse cx="160" cy="276" rx="140" ry="14" fill="#f3b4c9" opacity=".55"/>
-        <defs>
-          <clipPath id="tierA"><rect x="40" y="190" width="240" height="84" rx="18"/></clipPath>
-          <clipPath id="tierB"><rect x="80" y="130" width="160" height="66" rx="16"/></clipPath>
-        </defs>
-        <!-- bottom tier -->
-        <rect x="40" y="190" width="240" height="84" rx="18" fill="#ffd3e1"/>
-        <g clip-path="url(#tierA)" fill="#fff"><rect x="40" y="190" width="240" height="14"/><circle cx="52" cy="204" r="12"/><circle cx="76" cy="204" r="12"/><circle cx="100" cy="204" r="12"/><circle cx="124" cy="204" r="12"/><circle cx="148" cy="204" r="12"/><circle cx="172" cy="204" r="12"/><circle cx="196" cy="204" r="12"/><circle cx="220" cy="204" r="12"/><circle cx="244" cy="204" r="12"/><circle cx="268" cy="204" r="12"/></g>
-        <circle cx="80" cy="246" r="6" fill="#e4608f"/><circle cx="130" cy="252" r="6" fill="#fff"/>
-        <circle cx="190" cy="246" r="6" fill="#e4608f"/><circle cx="240" cy="252" r="6" fill="#fff"/>
-        <!-- top tier -->
-        <rect x="80" y="130" width="160" height="66" rx="16" fill="#ffc2d6"/>
-        <g clip-path="url(#tierB)" fill="#fff"><rect x="80" y="130" width="160" height="14"/><circle cx="83" cy="144" r="11"/><circle cx="105" cy="144" r="11"/><circle cx="127" cy="144" r="11"/><circle cx="149" cy="144" r="11"/><circle cx="171" cy="144" r="11"/><circle cx="193" cy="144" r="11"/><circle cx="215" cy="144" r="11"/><circle cx="237" cy="144" r="11"/></g>
-        <circle cx="120" cy="178" r="5" fill="#c99a5b"/><circle cx="160" cy="184" r="5" fill="#c99a5b"/><circle cx="200" cy="178" r="5" fill="#c99a5b"/>
-        <!-- candles -->
-        <g>
-          <rect x="116" y="92" width="12" height="40" rx="4" fill="#fff"/>
-          <rect x="116" y="100" width="12" height="6" fill="#e4608f"/><rect x="116" y="114" width="12" height="6" fill="#e4608f"/>
-          <path class="flame" d="M122 58c9 11 9 22 0 28-9-6-9-17 0-28z" fill="#ffb347"/>
-          <path class="flame" d="M122 68c4 6 4 12 0 15-4-3-4-9 0-15z" fill="#fff3c4"/>
-        </g>
-        <g>
-          <rect x="192" y="92" width="12" height="40" rx="4" fill="#fff"/>
-          <rect x="192" y="100" width="12" height="6" fill="#c99a5b"/><rect x="192" y="114" width="12" height="6" fill="#c99a5b"/>
-          <path class="flame" d="M198 58c9 11 9 22 0 28-9-6-9-17 0-28z" fill="#ffb347"/>
-          <path class="flame" d="M198 68c4 6 4 12 0 15-4-3-4-9 0-15z" fill="#fff3c4"/>
-        </g>
-        <g class="smoke" fill="none" stroke="#c9a3b3" stroke-width="2" stroke-linecap="round" opacity="0">
-          <path d="M122 80c-6-10 6-14 0-26"/><path d="M198 80c-6-10 6-14 0-26"/>
-        </g>
-      </svg>
-
-      <button class="btn btn--primary" id="blow" type="button">Blow out the candles</button>
-      <button class="link-btn" id="skip" type="button">Skip intro</button>
+  <!-- background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__layer">
+      <i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i>
+      <div class="floaters" id="floaters"></div>
     </div>
   </div>
+  <div class="glow" id="glow" aria-hidden="true"></div>
 
-  <canvas id="confetti" aria-hidden="true"></canvas>
-  <div class="hearts" id="hearts" aria-hidden="true"></div>
-
-  <!-- ============ Navigation ============ -->
-  <header class="nav" id="nav">
-    <a class="nav__brand" href="#home" aria-label="Amina and Eren, home">
-      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.8 8.3 2.7 4.5 6.3 4.5c2 0 3.7 1.1 4.7 2.7h2c1-1.6 2.7-2.7 4.7-2.7 3.6 0 5.5 3.8 3.9 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/></svg>
-      <span>Amina &amp; Eren</span>
-    </a>
-    <nav class="nav__links" id="nav-links" aria-label="Main">
-      <a href="#birthdays">Birthdays</a>
-      <a href="#story">Our story</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#letter">Letter</a>
-      <a href="#party">Party</a>
-      <a href="#wishes">Wishes</a>
-    </nav>
-    <div class="nav__tools">
+  <!-- top bar -->
+  <header class="top">
+    <div class="badge" aria-label="For Amina">
+      <svg class="bh bh--1" aria-hidden="true"><use href="#heart"/></svg>
+      <svg class="bh bh--2" aria-hidden="true"><use href="#heart"/></svg>
+      <svg class="bh bh--3" aria-hidden="true"><use href="#heart"/></svg>
+      <svg class="bh bh--4" aria-hidden="true"><use href="#heart"/></svg>
+      <svg class="bh bh--main" aria-hidden="true"><use href="#heart"/></svg>
+      <span class="badge__text">For Amina</span>
+      <svg class="bh bh--main bh--r" aria-hidden="true"><use href="#heart"/></svg>
+    </div>
+    <div class="tools">
       <button class="icon-btn" id="music" type="button" aria-pressed="false" aria-label="Play music" hidden>
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path class="i-play" d="M9 7v10l8-5z" fill="currentColor"/><g class="i-pause" fill="currentColor"><rect x="8" y="7" width="3" height="10" rx="1"/><rect x="13" y="7" width="3" height="10" rx="1"/></g></svg>
       </button>
-      <button class="icon-btn nav__burger" id="burger" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
-        <span></span><span></span>
+      <button class="icon-btn" id="fs" type="button" aria-label="Full screen" hidden>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
       </button>
     </div>
   </header>
 
-  <main>
-    <!-- ============ Hero ============ -->
-    <section class="hero" id="home">
-      <p class="hero__pre">You’re invited to celebrate</p>
-      <h2 class="hero__names" aria-label="Amina and Eren">
-        <span class="hero__name hero__name--a" id="name-a">Amina</span>
-        <span class="hero__amp" aria-hidden="true">&amp;</span>
-        <span class="hero__name hero__name--b" id="name-b">Eren</span>
-      </h2>
-      <p class="hero__tag" id="tagline">Two birthdays, one big celebration.</p>
+  <!-- the presentation -->
+  <main class="deck" id="deck" aria-live="polite"></main>
+  <noscript><p style="position:fixed;inset:40% 1rem auto;text-align:center">This little gift needs JavaScript to open. Please turn it on.</p></noscript>
 
-      <div class="countdown" id="countdown" role="timer" aria-live="off">
-        <div class="countdown__cell"><b id="cd-d">00</b><span>days</span></div>
-        <div class="countdown__cell"><b id="cd-h">00</b><span>hours</span></div>
-        <div class="countdown__cell"><b id="cd-m">00</b><span>minutes</span></div>
-        <div class="countdown__cell"><b id="cd-s">00</b><span>seconds</span></div>
-      </div>
-      <p class="hero__when" id="hero-when"></p>
+  <p class="hint" id="hint"></p>
+  <nav class="controls" aria-label="Slides">
+    <button class="icon-btn" id="prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="dots" id="dots"></div>
+    <button class="icon-btn" id="next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </nav>
 
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#party">RSVP</a>
-        <a class="btn btn--ghost" href="#wishes">Leave a wish</a>
-      </div>
-      <a class="hero__scroll" href="#birthdays" aria-label="Scroll to birthdays"><span></span></a>
-    </section>
-
-    <!-- ============ Birthdays ============ -->
-    <section class="section" id="birthdays">
-      <div class="wrap">
-        <h2 class="section__title">Two birthdays, twelve days apart</h2>
-        <p class="section__lead">Amina and Eren are celebrating together this year.</p>
-        <div class="bday-grid" id="bday-grid"></div>
-      </div>
-    </section>
-
-    <!-- ============ Story ============ -->
-    <section class="section section--tint" id="story">
-      <div class="wrap wrap--narrow">
-        <h2 class="section__title">Our story so far</h2>
-        <ol class="timeline" id="timeline"></ol>
-      </div>
-    </section>
-
-    <!-- ============ Gallery ============ -->
-    <section class="section" id="gallery">
-      <div class="wrap">
-        <h2 class="section__title">Moments we love</h2>
-        <p class="section__lead">Tap a photo to see it bigger.</p>
-        <div class="gallery" id="gallery-grid"></div>
-      </div>
-    </section>
-
-    <!-- ============ Letter ============ -->
-    <section class="section section--tint" id="letter">
-      <div class="wrap wrap--narrow letter-wrap">
-        <h2 class="section__title">A letter for you both</h2>
-        <button class="envelope" id="envelope" type="button" aria-expanded="false" aria-controls="letter-paper">
-          <span class="envelope__back"></span>
-          <span class="envelope__paper-peek"></span>
-          <span class="envelope__front"></span>
-          <span class="envelope__flap"></span>
-          <span class="envelope__seal" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-7.5-4.6-9.6-9.2C.8 8.3 2.7 4.5 6.3 4.5c2 0 3.7 1.1 4.7 2.7h2c1-1.6 2.7-2.7 4.7-2.7 3.6 0 5.5 3.8 3.9 7.3C19.5 16.4 12 21 12 21z" fill="#fff"/></svg>
-          </span>
-          <span class="envelope__hint" id="envelope-hint">Tap to open</span>
-        </button>
-        <article class="letter" id="letter-paper" aria-hidden="true"></article>
-      </div>
-    </section>
-
-    <!-- ============ Party + RSVP ============ -->
-    <section class="section" id="party">
-      <div class="wrap">
-        <h2 class="section__title">The party</h2>
-        <div class="party">
-          <div class="party__info">
-            <dl class="facts" id="facts"></dl>
-            <h3 class="party__sub">The evening</h3>
-            <ul class="schedule" id="schedule"></ul>
-            <div class="party__actions">
-              <a class="btn btn--ghost" id="map-link" href="#" target="_blank" rel="noopener">Open in maps</a>
-              <button class="btn btn--ghost" id="ics" type="button">Add to calendar</button>
-            </div>
-          </div>
-
-          <form class="card form" id="rsvp" novalidate>
-            <h3 class="form__title">Will you join us?</h3>
-            <label class="field">
-              <span>Your name</span>
-              <input type="text" name="name" autocomplete="name" required maxlength="60">
-            </label>
-            <fieldset class="field choice">
-              <legend>Can you make it?</legend>
-              <label><input type="radio" name="attending" value="yes" checked><span>Yes, count me in</span></label>
-              <label><input type="radio" name="attending" value="no"><span>Sorry, I can’t</span></label>
-            </fieldset>
-            <label class="field" id="guests-field">
-              <span>How many guests, including you?</span>
-              <input type="number" name="guests" min="1" max="6" value="1" inputmode="numeric">
-            </label>
-            <label class="field">
-              <span>Dietary needs or a note (optional)</span>
-              <textarea name="note" rows="3" maxlength="300"></textarea>
-            </label>
-            <p class="form__error" id="rsvp-error" role="alert" hidden></p>
-            <button class="btn btn--primary btn--block" type="submit">Send RSVP</button>
-            <p class="form__done" id="rsvp-done" role="status" hidden></p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ Wishes ============ -->
-    <section class="section section--tint" id="wishes">
-      <div class="wrap">
-        <h2 class="section__title">Birthday wishes</h2>
-        <p class="section__lead">Write a few words for Amina and Eren.</p>
-        <div class="wishes">
-          <form class="card form" id="wish-form" novalidate>
-            <label class="field">
-              <span>Your name</span>
-              <input type="text" name="name" autocomplete="name" required maxlength="40">
-            </label>
-            <label class="field">
-              <span>Your wish</span>
-              <textarea name="text" rows="4" required maxlength="280"></textarea>
-              <small class="count"><span id="wish-count">0</span>/280</small>
-            </label>
-            <p class="form__error" id="wish-error" role="alert" hidden></p>
-            <button class="btn btn--primary btn--block" type="submit">Post wish</button>
-          </form>
-          <ul class="wall" id="wall" aria-live="polite"></ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p class="footer__names">Amina <i>&amp;</i> Eren</p>
-    <p class="footer__small">Made with love · Thank you for celebrating with us</p>
-  </footer>
-
-  <!-- ============ Lightbox ============ -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
-    <button class="lightbox__btn lightbox__close" id="lb-close" type="button" aria-label="Close">×</button>
-    <button class="lightbox__btn lightbox__prev" id="lb-prev" type="button" aria-label="Previous photo">‹</button>
-    <figure class="lightbox__fig">
-      <img id="lb-img" src="" alt="">
-      <figcaption id="lb-cap"></figcaption>
-    </figure>
-    <button class="lightbox__btn lightbox__next" id="lb-next" type="button" aria-label="Next photo">›</button>
+  <!-- intro: blow out the candle -->
+  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+    <div class="intro__inner">
+      <h1 class="intro__title" id="intro-title">Make a wish, Amina</h1>
+      <p class="intro__sub">Blow out the candle to open your surprise.</p>
+      <svg class="cake" viewBox="0 0 320 300" aria-hidden="true">
+        <defs>
+          <clipPath id="tierA"><rect x="40" y="190" width="240" height="84" rx="18"/></clipPath>
+          <clipPath id="tierB"><rect x="80" y="130" width="160" height="66" rx="16"/></clipPath>
+        </defs>
+        <ellipse cx="160" cy="276" rx="140" ry="14" fill="#f3b4c9" opacity=".55"/>
+        <rect x="40" y="190" width="240" height="84" rx="18" fill="#ffd3e1"/>
+        <g clip-path="url(#tierA)" fill="#fff"><rect x="40" y="190" width="240" height="14"/><circle cx="52" cy="204" r="12"/><circle cx="76" cy="204" r="12"/><circle cx="100" cy="204" r="12"/><circle cx="124" cy="204" r="12"/><circle cx="148" cy="204" r="12"/><circle cx="172" cy="204" r="12"/><circle cx="196" cy="204" r="12"/><circle cx="220" cy="204" r="12"/><circle cx="244" cy="204" r="12"/><circle cx="268" cy="204" r="12"/></g>
+        <circle cx="80" cy="246" r="6" fill="#e4608f"/><circle cx="130" cy="252" r="6" fill="#fff"/>
+        <circle cx="190" cy="246" r="6" fill="#e4608f"/><circle cx="240" cy="252" r="6" fill="#fff"/>
+        <rect x="80" y="130" width="160" height="66" rx="16" fill="#ffc2d6"/>
+        <g clip-path="url(#tierB)" fill="#fff"><rect x="80" y="130" width="160" height="14"/><circle cx="94" cy="144" r="11"/><circle cx="116" cy="144" r="11"/><circle cx="138" cy="144" r="11"/><circle cx="160" cy="144" r="11"/><circle cx="182" cy="144" r="11"/><circle cx="204" cy="144" r="11"/><circle cx="226" cy="144" r="11"/></g>
+        <circle cx="120" cy="178" r="5" fill="#c99a5b"/><circle cx="160" cy="184" r="5" fill="#c99a5b"/><circle cx="200" cy="178" r="5" fill="#c99a5b"/>
+        <g>
+          <rect x="154" y="92" width="12" height="40" rx="4" fill="#fff"/>
+          <rect x="154" y="100" width="12" height="6" fill="#e4608f"/><rect x="154" y="114" width="12" height="6" fill="#e4608f"/>
+          <path class="flame" d="M160 58c9 11 9 22 0 28-9-6-9-17 0-28z" fill="#ffb347"/>
+          <path class="flame" d="M160 68c4 6 4 12 0 15-4-3-4-9 0-15z" fill="#fff3c4"/>
+        </g>
+        <g class="smoke" fill="none" stroke="#c9a3b3" stroke-width="2" stroke-linecap="round" opacity="0"><path d="M160 80c-6-10 6-14 0-26"/></g>
+      </svg>
+      <button class="btn btn--primary" id="blow" type="button">Blow out the candle</button>
+    </div>
   </div>
 
+  <canvas id="fx" aria-hidden="true"></canvas>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <audio id="audio" loop preload="none"></audio>
 
